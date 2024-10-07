@@ -16,7 +16,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+
 public class ProductAttributeId implements Serializable {
 
     private int productId;

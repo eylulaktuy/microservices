@@ -17,19 +17,18 @@ public class ProductAttribute {
     @EmbeddedId
     private ProductAttributeId id;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name = "product_id")
     @ManyToOne
+    @JoinColumn(name = "product_id")
+    @MapsId("productId")
     private Product product;
 
     @Column(name="value")
     private int value;
 
-    @Id
+
     @ManyToOne
-    @NotNull
-    @JoinColumn (name="attribute_id")
+    @JoinColumn(name="attribute_id")
+    @MapsId("attributeId")
     private Attribute attribute;
 
 

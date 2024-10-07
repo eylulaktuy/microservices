@@ -15,8 +15,8 @@ import lombok.Setter;
 @Table(name="corporate_customer")
 public class CorporateCustomer {
     @Id
-    @JoinColumn(name = "customer_id")
     @OneToOne
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     @NotNull
